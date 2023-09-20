@@ -12,7 +12,7 @@ Let's import the 'FAS_litters.csv'csv
 
 ```{r}
 litters_df=
-  read_csv("data/FAS_litters.csv")
+  read.csv("data/FAS_litters.csv")
 
 litters_df =
  janitor::clean_names(litters_df)
@@ -27,6 +27,44 @@ litters_df_abs =
 
 litters_df_abs =
  janitor::clean_names(litters_df_abs)
+```
+
+```{r}
+pups_df=
+  read.csv("data/FAS_pups.csv")
+
+pups_df=
+  janitor::clean_names(pups_df)
+```
+
+
+```{r}
+pups_df_abs =
+  read.csv("~/Desktop/R/data_wrangling_i/data/FAS_pups.csv")
+
+pups_df_abs =
+  janitor::clean_names(pups_df_abs)
+```
+
+## Look at Data
+
+```{r}
+litters_df
+
+head(litters_df)
+
+tail(litters_df)
+```
+you can use "view"
+
+```{r, eval=FALSE}
+View(litters_df)
+```
+## Look at data summary
+
+```{r}
+str(litters_df)
+skimr::skim(litters_df)
 ```
 
 
